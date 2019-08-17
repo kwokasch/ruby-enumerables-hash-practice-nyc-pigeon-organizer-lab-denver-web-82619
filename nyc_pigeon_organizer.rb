@@ -1,5 +1,3 @@
-require 'pry' 
-
 def nyc_pigeon_organizer(data)
   new_pigeon_list = {}
   
@@ -37,5 +35,3 @@ def nyc_pigeon_organizer(data)
   end
   new_pigeon_list
 end
-
-# nyc_pigeon_organizer(pigeon_data)
