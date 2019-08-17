@@ -5,7 +5,6 @@ def nyc_pigeon_organizer(data)
   
   data.each do |descriptor, attribute_hash|
     attribute_hash.each do |attribute, name_array|
-      pigeon_name = name_array.first
       name_array.each do |name|
       
       new_pigeon_list["#{pigeon_name}"] = {:color => [], :gender => [], :lives => []} 
