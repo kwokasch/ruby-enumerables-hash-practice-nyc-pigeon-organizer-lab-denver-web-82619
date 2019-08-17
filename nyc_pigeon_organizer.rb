@@ -13,5 +13,22 @@ def nyc_pigeon_organizer(data)
       if data[:color][attribute].include?(name)
         new_pigeon_list[name][:color] << attribute.to_s 
       end
-    
+    end
+  end
+  
+  data[:gender].each do |attribute, name_array|
+    name_array.each do |name|
+      if data[:gender][attribute].include?(name)
+        new_pigeon_list[name][:gender] << attribute.to_s 
+      end
+    end
+  end
+  
+    data[:lives].each do |attribute, name_array|
+    name_array.each do |name|
+      if data[:lives][attribute].include?(name)
+        new_pigeon_list[name][:lives] << attribute.to_s 
+      end
+    end
+  end
 end
