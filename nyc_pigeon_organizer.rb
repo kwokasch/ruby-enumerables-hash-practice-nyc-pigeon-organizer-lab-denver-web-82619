@@ -17,6 +17,7 @@ def nyc_pigeon_organizer(data)
         new_pigeon_list[name][:color] << attribute.to_s 
       end
     end
+    new_pigeon_list
   end
   
   data[:gender].each do |attribute, name_array|
@@ -25,6 +26,7 @@ def nyc_pigeon_organizer(data)
         new_pigeon_list[name][:gender] << attribute.to_s 
       end
     end
+    new_pigeon_list
   end
   
     data[:lives].each do |attribute, name_array|
@@ -33,5 +35,6 @@ def nyc_pigeon_organizer(data)
         new_pigeon_list[name][:lives] << attribute.to_s 
       end
     end
+    new_pigeon_list
   end
 end
