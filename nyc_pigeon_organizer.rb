@@ -8,6 +8,9 @@ def nyc_pigeon_organizer(data)
       name_array.each do |name|
         
       new_pigeon_list[name] = {:color => [], :gender => [], :lives => []} 
+      end
+    end
+  end
   
   data[:color].each do |color, name_array|
     name_array.each do |name|
