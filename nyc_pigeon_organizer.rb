@@ -18,6 +18,7 @@ def nyc_pigeon_organizer(data)
   end
      
   data[:color].each do |attribute, name_array|
+    #=> in the passed in "data" hash, grab the :color key 
     name_array.each do |name|
       if data[:color][attribute].include?(name)
         new_pigeon_list["#{name}"][:color] << attribute.to_s 
