@@ -2,7 +2,7 @@
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
   
-  data.each do |descriptor|
+  data.each do |descriptor, items|
     descriptor.each do |specific_descriptor|
       pigeon_name = specific_descriptor.values.first 
       
