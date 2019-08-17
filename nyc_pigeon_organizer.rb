@@ -4,10 +4,12 @@ def nyc_pigeon_organizer(data)
   data.each do |descriptor, attribute_hash| 
     #=> in the passed in hash, grab the keys ("descriptor") and the values (hashes) associated with those keys
     attribute_hash.each do |attribute, name_array|
-       #=> in the hashes associated with the "descriptor" keys, grab the keys ("descriptor") and the values (hashes) associated with those keys
+       #=> within the hashes associated with the "descriptor" keys, grab the keys ("attribute") and the array of names associated with those keys'
+       
       name_array.each do |name|
-      
+      #=> within the name array, grab each name
       new_pigeon_list["#{name}"] = {:color => [], :gender => [], :lives => []} 
+      #=> for each name in the array, add that name to the new has as a key, and pair it with a hash --> within this hash, create the keys ":color", ":gender", ":lives"
       end
     end
   end
