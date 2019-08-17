@@ -1,6 +1,9 @@
+require pry 
 
 def nyc_pigeon_organizer(data)
   new_pigeon_list = {}
+  
+  binding.pry
   
   data.each do |descriptor, attribute_hash|
     attribute_hash.each do |attribute, name_array|
