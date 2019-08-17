@@ -18,13 +18,17 @@ def nyc_pigeon_organizer(data)
   end
      
   data[:color].each do |attribute, name_array|
-    #=> in the passed in "data" hash, look at the :color key and grab the attribute (i.e. "purple") the name array associated with the :color key
+    #=> in the passed in "data" hash, look at the :color key and its associated hash --> within that hash, grab the "attribute" key (i.e. "purple") and its associated name array 
     
     name_array.each do |name|
       #=> within the name array, grab each name
       
       if data[:color][attribute].include?(name)
+        #=> if the attribute (i.e. purple) associated with the :color key within the data has includes a specific pigeon name in the name array
+        
         new_pigeon_list["#{name}"][:color] << attribute.to_s 
+        #=> add that attribute (i.e. purple) as a string to the :color key of that pigeon's name within the new hash ("new_pigeon_list")
+        
       end
     end
   end
@@ -44,5 +48,5 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  new_pigeon_list
+  new_pigeon_list   #=> return new hash 
 end
