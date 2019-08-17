@@ -5,7 +5,7 @@ def nyc_pigeon_organizer(data)
   
   data.each do |descriptor, attribute_hash|
     attribute_hash.each do |attribute, name_array|
-      pigeon_name = name_array.values.first
+      pigeon_name = name_array.first
       name_array.each do |name|
       
       new_pigeon_list["#{pigeon_name}"] = {:color => [], :gender => [], :lives => []} 
@@ -15,7 +15,7 @@ def nyc_pigeon_organizer(data)
      
   data[:color].each do |attribute, name_array|
     name_array.each do |name|
-      pigeon_name = attribute.name_array.first
+      pigeon_name = name_array.first
       if data[:color][attribute].include?(pigeon_name)
         new_pigeon_list["#{pigeon_name}"][:color] << attribute.to_s 
       end
@@ -24,7 +24,7 @@ def nyc_pigeon_organizer(data)
   
   data[:gender].each do |attribute, name_array|
     name_array.each do |name|
-      pigeon_name = attribute.name_array.first
+      pigeon_name = name_array.first
       if data[:gender][attribute].include?(pigeon_name)
         new_pigeon_list["#{pigeon_name}"][:gender] << attribute.to_s 
       end
@@ -33,7 +33,7 @@ def nyc_pigeon_organizer(data)
   
   data[:lives].each do |attribute, name_array|
     name_array.each do |name|
-      pigeon_name = attribute.name_array.first
+      pigeon_name = name_array.first
       if data[:lives][attribute].include?(pigeon_name)
         new_pigeon_list["#{pigeon_name}"] << attribute.to_s 
       end
