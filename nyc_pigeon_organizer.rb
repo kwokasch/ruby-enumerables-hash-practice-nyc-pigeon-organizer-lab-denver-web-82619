@@ -10,7 +10,7 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
- end    
+     
   data[:color].each do |color, name_array|
     name_array.each do |name|
       if data[:color][attribute].include?(name)
