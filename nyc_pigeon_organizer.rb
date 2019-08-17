@@ -31,7 +31,6 @@ def nyc_pigeon_organizer(data)
   
   data[:lives].each do |attribute, name_array|
     name_array.each do |name|
-      pigeon_name = name_array.first
       if data[:lives][attribute].include?(name)
         new_pigeon_list["#{name}"][:lives] << attribute.to_s 
       end
